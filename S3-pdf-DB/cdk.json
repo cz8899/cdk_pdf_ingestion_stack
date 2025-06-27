@@ -1,0 +1,7 @@
+{
+    "app": "node lib/index.js",
+    "context": {
+      "stackName": "devgenius-mini",
+      "region": "us-west-2"
+    }
+  }
