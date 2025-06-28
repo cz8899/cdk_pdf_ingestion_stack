@@ -1,11 +1,10 @@
-import { Stack, StackProps, CfnOutput, Duration } from 'aws-cdk-lib';
+import { Stack, StackProps, CfnOutput, Duration, RemovalPolicy, CfnParameter } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3n from 'aws-cdk-lib/aws-s3-notifications';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as bedrock from 'aws-cdk-lib/aws-bedrock';
 import * as path from 'path';
-import { CfnParameter } from 'aws-cdk-lib';
 
 export class CdkTsStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -23,7 +22,7 @@ export class CdkTsStack extends Stack {
 
     const pdfBucket = new s3.Bucket(this, 'PdfBucket', {
       versioned: false,
-      removalPolicy: s3.RemovalPolicy.DESTROY,
+      removalPolicy: RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
     });
 
