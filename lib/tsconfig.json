@@ -8,9 +8,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "types": ["node"],
+    "types": ["node", "jest", "aws-cdk"],
+    "lib": ["es2020", "dom"],
+    "resolveJsonModule": true,
+    "typeRoots": ["../node_modules/@types"],
     "outFile": "../dist/index.js"
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cdk.out", "cdk.context.json"]
 }
