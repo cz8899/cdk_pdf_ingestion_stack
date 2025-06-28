@@ -1,0 +1,20 @@
+{
+  "name": "cdk-ts-pdf-ingestion",
+  "version": "0.1.0",
+  "bin": {
+    "cdk-ts-app": "bin/cdk-ts-app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "aws-cdk": "^2.130.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.130.0",
+    "constructs": "^10.3.0"
+  }
+}
