@@ -1,5 +1,5 @@
 {
-    "app": "node lib/index.js",
+    "app": "node dist/index.js",
     "context": {
       "stackName": "devgenius-mini",
       "region": "us-west-2"
